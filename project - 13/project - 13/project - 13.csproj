@@ -1,0 +1,875 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1463EE75-E329-4D85-95E3-5F35A31A24B6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>project___13</RootNamespace>
+    <AssemblyName>project - 13</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.4">
+      <HintPath>..\..\..\..\..\Desktop\Bunifu_UI_v1.4.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Facebook.7.0.10-beta\lib\net45\Facebook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes\Admin.cs" />
+    <Compile Include="classes\Class.cs" />
+    <Compile Include="classes\constraints.cs" />
+    <Compile Include="classes\Course.cs" />
+    <Compile Include="forms\FacebookLoginDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FacebookLoginDialog.Designer.cs">
+      <DependentUpon>FacebookLoginDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\secretary_forms\AddCourseToBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\secretary_forms\AddCourseToBoard.Designer.cs">
+      <DependentUpon>AddCourseToBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\admin_forms\Admin_form_add_new_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\admin_forms\Admin_form_add_new_course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\admin_forms\Admin_form_add_new_course.Designer.cs">
+      <DependentUpon>Admin_form_add_new_course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\admin_forms\Admin_form_add_new_user.Designer.cs">
+      <DependentUpon>Admin_form_add_new_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\admin_forms\change_pass_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\admin_forms\change_pass_form.Designer.cs">
+      <DependentUpon>change_pass_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classes\DBC.cs" />
+    <Compile Include="classes\deptmanager.cs" />
+    <Compile Include="forms\secretary_forms\chosen_event_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\secretary_forms\chosen_event_form.Designer.cs">
+      <DependentUpon>chosen_event_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\deptManager_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\deptManager_form.Designer.cs">
+      <DependentUpon>deptManager_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\admin_forms\FeedClassesToSystemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\admin_forms\SetNewPermissionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\admin_forms\SetNewPermissionForm.Designer.cs">
+      <DependentUpon>SetNewPermissionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\secretary_forms\Secretary_addremove_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\secretary_forms\Secretary_addremove_user.Designer.cs">
+      <DependentUpon>Secretary_addremove_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\teacher_forms\declare_RP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\teacher_forms\declare_RP.Designer.cs">
+      <DependentUpon>declare_RP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\teacher_forms\Teachers_schedule_board.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\teacher_forms\Teachers_schedule_board.Designer.cs">
+      <DependentUpon>Teachers_schedule_board.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\admin_forms\Teacher_add_courses_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\admin_forms\Teacher_add_courses_form.Designer.cs">
+      <DependentUpon>Teacher_add_courses_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\admin_forms\Teacher_set_course_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\admin_forms\Teacher_set_course_form.Designer.cs">
+      <DependentUpon>Teacher_set_course_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\secretary_forms\Schedule_Board.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\secretary_forms\Schedule_Board.Designer.cs">
+      <DependentUpon>Schedule_Board.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\admin_forms\FeedClassesToSystemForm.Designer.cs">
+      <DependentUpon>FeedClassesToSystemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\admin_forms\SearchAndChooseUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\admin_forms\SearchAndChooseUser.Designer.cs">
+      <DependentUpon>SearchAndChooseUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\admin_forms\SearchUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\admin_forms\SearchUser.Designer.cs">
+      <DependentUpon>SearchUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classes\Secretary.cs" />
+    <Compile Include="forms\secretary_forms\Secretary_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\secretary_forms\Secretary_form.Designer.cs">
+      <DependentUpon>Secretary_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classes\Teacher.cs" />
+    <Compile Include="forms\admin_forms\Admin_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\admin_forms\Admin_form.Designer.cs">
+      <DependentUpon>Admin_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classes\Login.cs" />
+    <Compile Include="classes\Person.cs" />
+    <Compile Include="forms\login_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\login_form.Designer.cs">
+      <DependentUpon>login_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classes\Program.cs" />
+    <Compile Include="forms\temp_form_kiril\Department_manager_remove_course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\temp_form_kiril\Department_manager_remove_course.Designer.cs">
+      <DependentUpon>Department_manager_remove_course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\temp_form_kiril\Department_maneger_update_course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\temp_form_kiril\Department_maneger_update_course.Designer.cs">
+      <DependentUpon>Department_maneger_update_course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\temp_form_kiril\Teacher_classroom_request.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\temp_form_kiril\Teacher_classroom_request.Designer.cs">
+      <DependentUpon>Teacher_classroom_request.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\temp_form_kiril\Teacher_movecon_request.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\temp_form_kiril\Teacher_movecon_request.Designer.cs">
+      <DependentUpon>Teacher_movecon_request.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\temp_form_kiril\Update_course_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\temp_form_kiril\Update_course_details.Designer.cs">
+      <DependentUpon>Update_course_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\temp_form_kiril\User`s_request_to_get_his_password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllCompulsoryCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllCompulsoryCourses.Designer.cs">
+      <DependentUpon>AllCompulsoryCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\temp_form_kiril\User`s_request_to_get_his_password.Designer.cs">
+      <DependentUpon>User`s_request_to_get_his_password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllElectiveCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllElectiveCourses.Designer.cs">
+      <DependentUpon>AllElectiveCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttendanceListLecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceListLecturer.Designer.cs">
+      <DependentUpon>AttendanceListLecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LecGiveGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecGiveGrade.Designer.cs">
+      <DependentUpon>LecGiveGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule_StudentCoordinator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schedule_StudentCoordinator.Designer.cs">
+      <DependentUpon>Schedule_StudentCoordinator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search_Suden%27s_schedule_StudentCoordinator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search_Suden%27s_schedule_StudentCoordinator.Designer.cs">
+      <DependentUpon>Search_Suden%27s_schedule_StudentCoordinator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentCoordinator.cs" />
+    <Compile Include="StudentSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentSchedule.Designer.cs">
+      <DependentUpon>StudentSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TutorSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TutorSearch.Designer.cs">
+      <DependentUpon>TutorSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes.cs">
+      <DependentUpon>connectToAllTabel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="connectToAllTabel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>connectToAllTabel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="connectToAllTabel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>connectToAllTabel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="connectToAllTabel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>connectToAllTabel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EditSchedule_StudentCoordinator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditSchedule_StudentCoordinator.Designer.cs">
+      <DependentUpon>EditSchedule_StudentCoordinator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lblget_last_name.cs" />
+    <Compile Include="LecSearchListByID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecSearchListByID.Designer.cs">
+      <DependentUpon>LecSearchListByID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LecSearchByName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecSearchByName.Designer.cs">
+      <DependentUpon>LecSearchByName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LecSearchEmailById.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecSearchEmailById.Designer.cs">
+      <DependentUpon>LecSearchEmailById.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LecSearchStudent%27sEmailByName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecSearchStudent%27sEmailByName.Designer.cs">
+      <DependentUpon>LecSearchStudent%27sEmailByName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LevSearchEmailByCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LevSearchEmailByCourse.Designer.cs">
+      <DependentUpon>LevSearchEmailByCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyDataTableSchedule.cs" />
+    <Compile Include="OLecture.cs" />
+    <Compile Include="OConstrain.cs" />
+    <Compile Include="Constraints.cs">
+      <DependentUpon>connectToAllTabel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OCourse.cs" />
+    <Compile Include="Courses.cs">
+      <DependentUpon>connectToAllTabel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoursesForTheSemester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoursesForTheSemester.Designer.cs">
+      <DependentUpon>CoursesForTheSemester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchStudentsScheduleStudentCoordinator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchStudentsScheduleStudentCoordinator.Designer.cs">
+      <DependentUpon>SearchStudentsScheduleStudentCoordinator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmailsOfLecturers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailsOfLecturers.Designer.cs">
+      <DependentUpon>EmailsOfLecturers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LecAttendanceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecAttendanceList.Designer.cs">
+      <DependentUpon>LecAttendanceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LecStusent%27sEmailAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecStusent%27sEmailAddress.Designer.cs">
+      <DependentUpon>LecStusent%27sEmailAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer.cs">
+      <DependentUpon>connectToAllTabel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson.cs">
+      <DependentUpon>connectToAllTabel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainStudent.Designer.cs">
+      <DependentUpon>MainStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuLecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuLecturer.Designer.cs">
+      <DependentUpon>MenuLecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuStudentCoordinator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuStudentCoordinator.Designer.cs">
+      <DependentUpon>MenuStudentCoordinator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuTutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuTutor.Designer.cs">
+      <DependentUpon>MenuTutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="OStudent.cs" />
+    <Compile Include="OTutor.cs" />
+    <Compile Include="OPerson.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quaires2.cs" />
+    <Compile Include="Queries.cs" />
+    <Compile Include="ScheduleOfCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScheduleOfCourse.Designer.cs">
+      <DependentUpon>ScheduleOfCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchingStudentEmailAddressStudentCoordinator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchingStudentEmailAddressStudentCoordinator.Designer.cs">
+      <DependentUpon>SearchingStudentEmailAddressStudentCoordinator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchStudentScheduleStudentCoordinator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchStudentScheduleStudentCoordinator.Designer.cs">
+      <DependentUpon>SearchStudentScheduleStudentCoordinator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs">
+      <DependentUpon>connectToAllTabel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentEditSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentEditSchedule.Designer.cs">
+      <DependentUpon>StudentEditSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentEmailAddressLecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentEmailAddressLecturer.Designer.cs">
+      <DependentUpon>StudentEmailAddressLecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsEmailAddressTutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentsEmailAddressTutor.Designer.cs">
+      <DependentUpon>StudentsEmailAddressTutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table.cs">
+      <DependentUpon>connectToAllTabel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TutorAttendanceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TutorAttendanceList.Designer.cs">
+      <DependentUpon>TutorAttendanceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TutorSearchById.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TutorSearchById.Designer.cs">
+      <DependentUpon>TutorSearchById.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TutorSearchByName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TutorSearchByName.Designer.cs">
+      <DependentUpon>TutorSearchByName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TutorSearchByCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TutorSearchByCourses.Designer.cs">
+      <DependentUpon>TutorSearchByCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TutorSearchEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TutorSearchEmail.Designer.cs">
+      <DependentUpon>TutorSearchEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TutorSearchEmailByID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TutorSearchEmailByID.Designer.cs">
+      <DependentUpon>TutorSearchEmailByID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TutorSearchEmailByName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TutorSearchEmailByName.Designer.cs">
+      <DependentUpon>TutorSearchEmailByName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TutorStudent%27sEmailAddressByCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TutorStudent%27sEmailAddressByCourse.Designer.cs">
+      <DependentUpon>TutorStudent%27sEmailAddressByCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <DependentUpon>connectToAllTabel.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AllCompulsoryCourses.resx">
+      <DependentUpon>AllCompulsoryCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllElectiveCourses.resx">
+      <DependentUpon>AllElectiveCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceListLecturer.resx">
+      <DependentUpon>AttendanceListLecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecGiveGrade.resx">
+      <DependentUpon>LecGiveGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule_StudentCoordinator.resx">
+      <DependentUpon>Schedule_StudentCoordinator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search_Suden%27s_schedule_StudentCoordinator.resx">
+      <DependentUpon>Search_Suden%27s_schedule_StudentCoordinator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentSchedule.resx">
+      <DependentUpon>StudentSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TutorSearch.resx">
+      <DependentUpon>TutorSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoursesForTheSemester.resx">
+      <DependentUpon>CoursesForTheSemester.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSchedule_StudentCoordinator.resx">
+      <DependentUpon>EditSchedule_StudentCoordinator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchStudentsScheduleStudentCoordinator.resx">
+      <DependentUpon>SearchStudentsScheduleStudentCoordinator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailsOfLecturers.resx">
+      <DependentUpon>EmailsOfLecturers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecAttendanceList.resx">
+      <DependentUpon>LecAttendanceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecSearchListByID.resx">
+      <DependentUpon>LecSearchListByID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecSearchByName.resx">
+      <DependentUpon>LecSearchByName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecSearchEmailById.resx">
+      <DependentUpon>LecSearchEmailById.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecSearchStudent%27sEmailByName.resx">
+      <DependentUpon>LecSearchStudent%27sEmailByName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecStusent%27sEmailAddress.resx">
+      <DependentUpon>LecStusent%27sEmailAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LevSearchEmailByCourse.resx">
+      <DependentUpon>LevSearchEmailByCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainStudent.resx">
+      <DependentUpon>MainStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuLecturer.resx">
+      <DependentUpon>MenuLecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuStudentCoordinator.resx">
+      <DependentUpon>MenuStudentCoordinator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuTutor.resx">
+      <DependentUpon>MenuTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="forms\teacher_forms\Teacher_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\teacher_forms\Teacher_form.Designer.cs">
+      <DependentUpon>Teacher_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="usersDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usersDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="usersDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usersDataSet2.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="forms\FacebookLoginDialog.resx">
+      <DependentUpon>FacebookLoginDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\secretary_forms\AddCourseToBoard.resx">
+      <DependentUpon>AddCourseToBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\admin_forms\Admin_form_add_new_course.resx">
+      <DependentUpon>Admin_form_add_new_course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\admin_forms\Admin_form_add_new_user.resx">
+      <DependentUpon>Admin_form_add_new_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\admin_forms\change_pass_form.resx">
+      <DependentUpon>change_pass_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\secretary_forms\chosen_event_form.resx">
+      <DependentUpon>chosen_event_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\deptManager_form.resx">
+      <DependentUpon>deptManager_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\admin_forms\FeedClassesToSystemForm.resx">
+      <DependentUpon>FeedClassesToSystemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\admin_forms\SetNewPermissionForm.resx">
+      <DependentUpon>SetNewPermissionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\secretary_forms\Secretary_addremove_user.resx">
+      <DependentUpon>Secretary_addremove_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\teacher_forms\declare_RP.resx">
+      <DependentUpon>declare_RP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\teacher_forms\Teachers_schedule_board.resx">
+      <DependentUpon>Teachers_schedule_board.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\admin_forms\Teacher_add_courses_form.resx">
+      <DependentUpon>Teacher_add_courses_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\admin_forms\Teacher_set_course_form.resx">
+      <DependentUpon>Teacher_set_course_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\login_form.resx">
+      <DependentUpon>login_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\admin_forms\Admin_form.resx">
+      <DependentUpon>Admin_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\admin_forms\SearchAndChooseUser.resx">
+      <DependentUpon>SearchAndChooseUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\secretary_forms\Schedule_Board.resx">
+      <DependentUpon>Schedule_Board.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\temp_form_kiril\Department_manager_remove_course.resx">
+      <DependentUpon>Department_manager_remove_course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\temp_form_kiril\Department_maneger_update_course.resx">
+      <DependentUpon>Department_maneger_update_course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\temp_form_kiril\Teacher_classroom_request.resx">
+      <DependentUpon>Teacher_classroom_request.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\temp_form_kiril\Teacher_movecon_request.resx">
+      <DependentUpon>Teacher_movecon_request.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\temp_form_kiril\Update_course_details.resx">
+      <DependentUpon>Update_course_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\temp_form_kiril\User`s_request_to_get_his_password.resx">
+      <DependentUpon>User`s_request_to_get_his_password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ScheduleOfCourse.resx">
+      <DependentUpon>ScheduleOfCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchingStudentEmailAddressStudentCoordinator.resx">
+      <DependentUpon>SearchingStudentEmailAddressStudentCoordinator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchStudentScheduleStudentCoordinator.resx">
+      <DependentUpon>SearchStudentScheduleStudentCoordinator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentEditSchedule.resx">
+      <DependentUpon>StudentEditSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentEmailAddressLecturer.resx">
+      <DependentUpon>StudentEmailAddressLecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentsEmailAddressTutor.resx">
+      <DependentUpon>StudentsEmailAddressTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TutorAttendanceList.resx">
+      <DependentUpon>TutorAttendanceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TutorSearchById.resx">
+      <DependentUpon>TutorSearchById.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TutorSearchByName.resx">
+      <DependentUpon>TutorSearchByName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TutorSearchByCourses.resx">
+      <DependentUpon>TutorSearchByCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TutorSearchEmail.resx">
+      <DependentUpon>TutorSearchEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TutorSearchEmailByID.resx">
+      <DependentUpon>TutorSearchEmailByID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TutorSearchEmailByName.resx">
+      <DependentUpon>TutorSearchEmailByName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TutorStudent%27sEmailAddressByCourse.resx">
+      <DependentUpon>TutorStudent%27sEmailAddressByCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="connectToAllTabel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>connectToAllTabel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="connectToAllTabel.edmx.diagram">
+      <DependentUpon>connectToAllTabel.edmx</DependentUpon>
+    </None>
+    <None Include="Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <EmbeddedResource Include="forms\admin_forms\SearchUser.resx">
+      <DependentUpon>SearchUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\secretary_forms\Secretary_form.resx">
+      <DependentUpon>Secretary_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\teacher_forms\Teacher_form.resx">
+      <DependentUpon>Teacher_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="usersDataSet.xsc">
+      <DependentUpon>usersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="usersDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>usersDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="usersDataSet.xss">
+      <DependentUpon>usersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="usersDataSet1.xsc">
+      <DependentUpon>usersDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="usersDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>usersDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="usersDataSet1.xss">
+      <DependentUpon>usersDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="usersDataSet2.xsc">
+      <DependentUpon>usersDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="usersDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>usersDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="usersDataSet2.xss">
+      <DependentUpon>usersDataSet2.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="connectToAllTabel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>connectToAllTabel.edmx</DependentUpon>
+      <LastGenOutput>connectToAllTabel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="connectToAllTabel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>connectToAllTabel.edmx</DependentUpon>
+      <LastGenOutput>connectToAllTabel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\רק כפתור נוסף.png" />
+    <None Include="Resources\רקע כפתור.png" />
+    <None Include="Resources\רקע1.png" />
+    <None Include="Resources\רקע.png" />
+    <None Include="Properties\login_img.gif" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
